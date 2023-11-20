@@ -1,13 +1,9 @@
-# Vagrant home work
-Собранная сборка Linux для первого ДЗ
+# Ansible home work
 
-Ссылка на сборку(box): 
-https://app.vagrantup.com/ruselbbc/boxes/kernelCentOs8
 
-Готовый Vagrant файл в репозитории.
+   1. Create directory "Ansible" (mkdir Ansible)
+   2. Copy all files from repository in new directory (Ansible)
+   3. Run vagrant up
+   4. Run playbook 'nginx'
 
-Для создания сборки по умолчанию в Vagrant:
-Vagrant.configure("2") do |config|
-  config.vm.box = "ruselbbc/kernelCentOs8"
-  config.vm.box_version = "0"
-end
+
