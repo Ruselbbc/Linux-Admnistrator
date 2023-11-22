@@ -1,4 +1,4 @@
-# Vagrant home work
+# Mdadm home work
 Собранная сборка Linux для первого ДЗ
 
 Ссылка на сборку(box): 
