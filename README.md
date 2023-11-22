@@ -1,13 +1,20 @@
 # Mdadm home work
-Собранная сборка Linux для первого ДЗ
 
-Ссылка на сборку(box): 
-https://app.vagrantup.com/ruselbbc/boxes/kernelCentOs8
+Copy all files on your machine
 
-Готовый Vagrant файл в репозитории.
+1. vagrant up
+2. copy mdadm.conf to /etc/mdadm/mdadm.conf
+3. restart VM
 
-Для создания сборки по умолчанию в Vagrant:
-Vagrant.configure("2") do |config|
-  config.vm.box = "ruselbbc/kernelCentOs8"
-  config.vm.box_version = "0"
-end
+   OR use this command to setup this raid
+
+   1.vagrant up
+   2.copy raid_up.sh to home directory
+   3.sudo sh raid_up.sh                  #Run this script
+                       or
+                            chmod +x
+                            raid_up.sh && ./raid_up.sh
+   
+   commands in this sh script:
+   mdadm --zero-superblock --force /dev/sd{b,c,d,e,f,g}
+   mdadm --create --verbose /dev/md0 -l 10 -n 5 /dev/sd{b,c,d,e,f,g}
